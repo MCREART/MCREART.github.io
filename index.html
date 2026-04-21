@@ -3,295 +3,328 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Personal Homepage of MCREART">
-    <title>MCREART | Portfolio</title>
+    <meta name="description" content="Academic Profile of MCREART">
+    <title>MCREART | Academic Profile</title>
+    <!-- Modern clean academic font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0f172a;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent-primary: #8b5cf6;
-            --accent-secondary: #3b82f6;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Outfit', sans-serif;
+            --bg-color: #fcfcfc;
+            --text-main: #333333;
+            --text-muted: #555555;
+            --link-color: #0366d6;
+            --link-hover: #004099;
+            --border-color: #eaeaea;
         }
 
         body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            min-height: 100vh;
-            overflow-x: hidden;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Abstract Background Animation */
-        .bg-shapes {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            z-index: -1;
-            overflow: hidden;
-            background: var(--bg-color);
-        }
-
-        .shape {
-            position: absolute;
-            filter: blur(80px);
-            opacity: 0.5;
-            animation: float 20s infinite ease-in-out alternate;
-        }
-
-        .shape-1 {
-            top: -10%;
-            left: -10%;
-            width: 50vw;
-            height: 50vw;
-            background: linear-gradient(135deg, var(--accent-primary), transparent);
-            border-radius: 50%;
-        }
-
-        .shape-2 {
-            bottom: -10%;
-            right: -10%;
-            width: 40vw;
-            height: 40vw;
-            background: linear-gradient(135deg, var(--accent-secondary), transparent);
-            border-radius: 50%;
-            animation-delay: -5s;
-        }
-
-        @keyframes float {
-            0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(10%, 10%) scale(1.1); }
-            100% { transform: translate(-5%, 5%) scale(0.9); }
-        }
-
-        /* Nav */
-        header {
-            padding: 2rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: 2px;
-            background: linear-gradient(to right, var(--text-main), var(--accent-primary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-decoration: none;
-        }
-
-        nav a {
-            color: var(--text-muted);
-            text-decoration: none;
-            margin-left: 2rem;
-            font-weight: 600;
-            transition: color 0.3s ease;
-        }
-
-        nav a:hover {
-            color: var(--text-main);
-        }
-
-        /* Hero Section */
-        .hero {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 5rem 5%;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        .hero-content {
-            max-width: 800px;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 0.5rem 1rem;
-            background: rgba(139, 92, 246, 0.1);
-            color: var(--accent-primary);
-            border-radius: 2rem;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(139, 92, 246, 0.2);
-        }
-
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 5.5rem);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-            font-weight: 800;
-        }
-
-        .hero h1 span {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero p {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 3rem;
             line-height: 1.6;
-            font-weight: 300;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
         }
 
-        .btn-group {
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--link-hover);
+            text-decoration: underline;
+        }
+
+        /* Profile Header */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #ddd; /* Placeholder background */
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        .profile-info h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 0.5rem 0;
+            letter-spacing: -0.02em;
+        }
+
+        .profile-info p {
+            margin: 0.25rem 0;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .contact-links {
+            margin-top: 1rem;
             display: flex;
             gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
+            font-size: 0.95rem;
         }
 
-        .btn {
-            padding: 1rem 2rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            border: none;
+        .contact-links a {
+            font-weight: 500;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-            color: white;
-            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.3);
+        /* Sections */
+        section {
+            margin-bottom: 3rem;
         }
 
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-main);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            transform: translateY(-2px);
-        }
-
-        /* Feature Section (Glassmorphism Cards) */
-        .features {
-            padding: 5rem 5%;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            margin-bottom: 5rem;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 1rem;
-            padding: 2.5rem;
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(139, 92, 246, 0.3);
-            background: rgba(255, 255, 255, 0.04);
-        }
-
-        .card h3 {
+        h2 {
             font-size: 1.5rem;
-            margin-bottom: 1rem;
             font-weight: 600;
+            margin-bottom: 1rem;
+            color: #111;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--border-color);
         }
 
-        .card p {
-            color: var(--text-muted);
-            line-height: 1.5;
+        p {
+            margin-bottom: 1rem;
         }
-        
+
+        /* News Section */
+        .news-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1rem;
+            background: #fff;
+        }
+
+        .news-list li {
+            margin-bottom: 0.75rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .news-list li:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .news-date {
+            font-weight: 600;
+            color: #555;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        /* Publications Section */
+        .pub-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .pub-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .pub-authors {
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .pub-me {
+            font-weight: 700;
+            color: #111;
+        }
+
+        .pub-venue {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .pub-links {
+            font-size: 0.9rem;
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .pub-links span {
+            color: #ccc;
+        }
+
+        /* Education */
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .edu-info strong {
+            display: block;
+            color: #111;
+        }
+
+        .edu-year {
+            color: var(--text-muted);
+            font-variant-numeric: tabular-nums;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
-            header {
+            .profile-header {
                 flex-direction: column;
+                text-align: center;
                 gap: 1.5rem;
             }
-            nav a {
-                margin: 0 1rem;
+            .contact-links {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .edu-item {
+                flex-direction: column;
+            }
+            .edu-year {
+                font-size: 0.9rem;
+                margin-top: 0.25rem;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="bg-shapes">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-    </div>
-
-    <header>
-        <a href="#" class="logo">MCREART</a>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Work</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-
-    <main class="hero">
-        <div class="hero-content">
-            <div class="badge">Welcome to my digital space</div>
-            <h1>Hi, I'm MCREART.<br>Crafting <span>Experiences</span>.</h1>
-            <p>I build interactive, beautiful, and highly performant web applications using modern web technologies.</p>
-            <div class="btn-group">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="profile-header">
+            <!-- Replace src with your actual photo path -->
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22200%22%20height%3D%22200%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%20preserveAspectRatio%3D%22none%22%3E%3Crect%20width%3D%22200%22%20height%3D%22200%22%20fill%3D%22%23dddddd%22%2F%3E%3Ctext%20x%3D%22100%22%20y%3D%22100%22%20fill%3D%22%23999999%22%20font-family%3D%22sans-serif%22%20font-size%3D%2216%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22middle%22%3EProfile Photo%3C%2Ftext%3E%3C%2Fsvg%3E" alt="MCREART" class="profile-pic">
+            
+            <div class="profile-info">
+                <h1>MCREART</h1>
+                <p>Ph.D. Student / Researcher in Computer Science</p>
+                <p>University of Example</p>
+                
+                <div class="contact-links">
+                    <a href="mailto:email@example.com">[Email]</a>
+                    <a href="#">[Google Scholar]</a>
+                    <a href="#">[GitHub]</a>
+                    <a href="#">[Twitter]</a>
+                    <a href="#">[CV]</a>
+                </div>
             </div>
-        </div>
-    </main>
+        </header>
 
-    <section class="features" id="about">
-        <div class="card">
-            <h3>Design First</h3>
-            <p>Creating scalable and beautiful design systems that ensure a premium look and feel.</p>
-        </div>
-        <div class="card">
-            <h3>Interactive UI</h3>
-            <p>Building engaging user interfaces with fluid animations, micro-interactions, and glassmorphism elements.</p>
-        </div>
-        <div class="card">
-            <h3>Modern Stack</h3>
-            <p>Leveraging the latest technologies to ship highly performant and accessible web applications.</p>
-        </div>
-    </section>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I am a Ph.D. student at the University of Example, advised by Prof. John Doe. My research focuses on artificial intelligence, machine learning, and its applications to complex systems. I am particularly interested in developing robust and interpretable models that can operate safely in real-world environments.
+            </p>
+            <p>
+                Previously, I received my B.S. in Computer Science from the Institute of Technology. I have also spent time as a research intern at Tech Lab.
+            </p>
+        </section>
+
+        <!-- News Section -->
+        <section id="news">
+            <h2>Recent News</h2>
+            <ul class="news-list">
+                <li>
+                    <span class="news-date">[Apr 2026]</span>
+                    One paper accepted to ICML 2026! See you in Vienna.
+                </li>
+                <li>
+                    <span class="news-date">[Jan 2026]</span>
+                    I will be joining Tech Lab as a Research Intern this summer.
+                </li>
+                <li>
+                    <span class="news-date">[Dec 2025]</span>
+                    Our work on robust learning frameworks has been accepted to NeurIPS 2025.
+                </li>
+            </ul>
+        </section>
+
+        <!-- Publications Section -->
+        <section id="publications">
+            <h2>Selected Publications</h2>
+            <p><em>* indicates equal contribution.</em></p>
+            <ul class="pub-list">
+                <li class="pub-item">
+                    <div class="pub-title">A Novel Approach to Interpretable Deep Learning Models</div>
+                    <div class="pub-authors">
+                        <span class="pub-me">MCREART</span>, Jane Smith, John Doe
+                    </div>
+                    <div class="pub-venue">International Conference on Machine Learning (ICML), 2026</div>
+                    <div class="pub-links">
+                        <a href="#">PDF</a> <span>|</span>
+                        <a href="#">Code</a> <span>|</span>
+                        <a href="#">Project Page</a>
+                    </div>
+                </li>
+
+                <li class="pub-item">
+                    <div class="pub-title">Robust Representation Learning for Time-Series Analysis</div>
+                    <div class="pub-authors">
+                        Alice Johnson*, <span class="pub-me">MCREART</span>*, John Doe
+                    </div>
+                    <div class="pub-venue">Conference on Neural Information Processing Systems (NeurIPS), 2025</div>
+                    <div class="pub-links">
+                        <a href="#">PDF</a> <span>|</span>
+                        <a href="#">Code</a>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <div class="edu-item">
+                <div class="edu-info">
+                    <strong>University of Example</strong>
+                    Ph.D. in Computer Science
+                </div>
+                <div class="edu-year">2024 - Present</div>
+            </div>
+            
+            <div class="edu-item">
+                <div class="edu-info">
+                    <strong>Institute of Technology</strong>
+                    B.S. in Computer Science (Hons)
+                </div>
+                <div class="edu-year">2020 - 2024</div>
+            </div>
+        </section>
+
+    </div>
 
 </body>
 </html>
