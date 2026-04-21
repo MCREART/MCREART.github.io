@@ -181,6 +181,17 @@
             color: #ccc;
         }
 
+        .pub-status {
+            font-style: italic;
+            color: var(--text-muted);
+            margin-bottom: 0.35rem;
+        }
+
+        .pub-summary {
+            color: var(--text-main);
+            margin-bottom: 0.45rem;
+        }
+
         /* Education */
         .edu-item {
             display: flex;
@@ -274,31 +285,51 @@
 
         <!-- Publications Section -->
         <section id="publications">
-            <h2>Selected Publications</h2>
-            <p><em>* indicates equal contribution.</em></p>
+            <h2>Selected Manuscripts</h2>
+            <p><em>Recent ongoing works and preprints.</em></p>
             <ul class="pub-list">
                 <li class="pub-item">
-                    <div class="pub-title">A Novel Approach to Interpretable Deep Learning Models</div>
+                    <div class="pub-title">Revisiting Classical Vision Priors for Visual Counting in Vision-Language Models</div>
                     <div class="pub-authors">
-                        <span class="pub-me">MCREART</span>, Jane Smith, John Doe
+                        <span class="pub-me">Xiangyu Wang</span>
                     </div>
-                    <div class="pub-venue">International Conference on Machine Learning (ICML), 2026</div>
+                    <div class="pub-status">Under review, 2026</div>
+                    <div class="pub-summary">
+                        A controlled study on how classical counting cues can be injected into vision-language models. The work compares several integration strategies and shows that structured residual correction is more effective than naive token-level fusion for dense visual counting.
+                    </div>
                     <div class="pub-links">
-                        <a href="#">PDF</a> <span>|</span>
-                        <a href="#">Code</a> <span>|</span>
-                        <a href="#">Project Page</a>
+                        <a href="https://openreview.net/forum?id=aZmxGSU6Yk">OpenReview</a> <span>|</span>
+                        <a href="https://openreview.net/pdf?id=aZmxGSU6Yk">PDF</a>
                     </div>
                 </li>
 
                 <li class="pub-item">
-                    <div class="pub-title">Robust Representation Learning for Time-Series Analysis</div>
+                    <div class="pub-title">Audio-Inspired Spatial Proxy Conditioning for Zombie Defense in Minecraft</div>
                     <div class="pub-authors">
-                        Alice Johnson*, <span class="pub-me">MCREART</span>*, John Doe
+                        <span class="pub-me">Xiangyu Wang</span>
                     </div>
-                    <div class="pub-venue">Conference on Neural Information Processing Systems (NeurIPS), 2025</div>
+                    <div class="pub-status">Under review, 2026</div>
+                    <div class="pub-summary">
+                        This project augments a video-pretrained Minecraft agent with a compact spatial side signal encoding bearing, distance, and visibility. The goal is to help the policy acquire off-screen threats more reliably in zombie-defense tasks.
+                    </div>
                     <div class="pub-links">
-                        <a href="#">PDF</a> <span>|</span>
-                        <a href="#">Code</a>
+                        <a href="https://openreview.net/forum?id=4ZRr5FKvFs">OpenReview</a> <span>|</span>
+                        <a href="https://openreview.net/pdf?id=4ZRr5FKvFs">PDF</a>
+                    </div>
+                </li>
+
+                <li class="pub-item">
+                    <div class="pub-title">Decoupling Semantics and Specificity: Depth-Controlled Hyperbolic Reranking on Frozen Embeddings</div>
+                    <div class="pub-authors">
+                        <span class="pub-me">Xiangyu Wang</span>
+                    </div>
+                    <div class="pub-status">Under review, 2026</div>
+                    <div class="pub-summary">
+                        A lightweight reranking framework for frozen embedding models that maps representations into a depth-controlled hyperbolic-Euclidean product space. The method separates semantic direction from hierarchical specificity to improve hierarchy-aware retrieval without updating the base encoder.
+                    </div>
+                    <div class="pub-links">
+                        <a href="https://openreview.net/forum?id=xhTCr8jpk4">OpenReview</a> <span>|</span>
+                        <a href="https://openreview.net/pdf?id=xhTCr8jpk4">PDF</a>
                     </div>
                 </li>
             </ul>
