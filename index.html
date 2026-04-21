@@ -165,28 +165,6 @@
             color: #111;
         }
 
-        .pub-venue {
-            font-style: italic;
-            color: var(--text-muted);
-            margin-bottom: 0.25rem;
-        }
-
-        .pub-links {
-            font-size: 0.9rem;
-            display: flex;
-            gap: 0.75rem;
-        }
-
-        .pub-links span {
-            color: #ccc;
-        }
-
-        .pub-status {
-            font-style: italic;
-            color: var(--text-muted);
-            margin-bottom: 0.35rem;
-        }
-
         .pub-summary {
             color: var(--text-main);
             margin-bottom: 0.45rem;
@@ -285,21 +263,16 @@
 
         <!-- Publications Section -->
         <section id="publications">
-            <h2>Selected Manuscripts</h2>
-            <p><em>Recent ongoing works and preprints.</em></p>
+            <h2>Selected Research</h2>
+            <p><em>Recent papers and ongoing projects.</em></p>
             <ul class="pub-list">
                 <li class="pub-item">
                     <div class="pub-title">Revisiting Classical Vision Priors for Visual Counting in Vision-Language Models</div>
                     <div class="pub-authors">
                         <span class="pub-me">Xiangyu Wang</span>
                     </div>
-                    <div class="pub-status">Under review, 2026</div>
                     <div class="pub-summary">
                         A controlled study on how classical counting cues can be injected into vision-language models. The work compares several integration strategies and shows that structured residual correction is more effective than naive token-level fusion for dense visual counting.
-                    </div>
-                    <div class="pub-links">
-                        <a href="https://openreview.net/forum?id=aZmxGSU6Yk">OpenReview</a> <span>|</span>
-                        <a href="https://openreview.net/pdf?id=aZmxGSU6Yk">PDF</a>
                     </div>
                 </li>
 
@@ -308,13 +281,8 @@
                     <div class="pub-authors">
                         <span class="pub-me">Xiangyu Wang</span>
                     </div>
-                    <div class="pub-status">Under review, 2026</div>
                     <div class="pub-summary">
                         This project augments a video-pretrained Minecraft agent with a compact spatial side signal encoding bearing, distance, and visibility. The goal is to help the policy acquire off-screen threats more reliably in zombie-defense tasks.
-                    </div>
-                    <div class="pub-links">
-                        <a href="https://openreview.net/forum?id=4ZRr5FKvFs">OpenReview</a> <span>|</span>
-                        <a href="https://openreview.net/pdf?id=4ZRr5FKvFs">PDF</a>
                     </div>
                 </li>
 
@@ -323,13 +291,18 @@
                     <div class="pub-authors">
                         <span class="pub-me">Xiangyu Wang</span>
                     </div>
-                    <div class="pub-status">Under review, 2026</div>
                     <div class="pub-summary">
                         A lightweight reranking framework for frozen embedding models that maps representations into a depth-controlled hyperbolic-Euclidean product space. The method separates semantic direction from hierarchical specificity to improve hierarchy-aware retrieval without updating the base encoder.
                     </div>
-                    <div class="pub-links">
-                        <a href="https://openreview.net/forum?id=xhTCr8jpk4">OpenReview</a> <span>|</span>
-                        <a href="https://openreview.net/pdf?id=xhTCr8jpk4">PDF</a>
+                </li>
+
+                <li class="pub-item">
+                    <div class="pub-title">RSVG-ZeroOV: Exploring a Training-Free Framework for Zero-Shot Open-Vocabulary Visual Grounding in Remote Sensing Images</div>
+                    <div class="pub-authors">
+                        Ke Li, Di Wang, Ting Wang, Fuyu Dong, Yiming Zhang, Luyao Zhang, <span class="pub-me">Xiangyu Wang</span>, Shaofeng Li, Quan Wang
+                    </div>
+                    <div class="pub-summary">
+                        A training-free framework for remote sensing visual grounding that combines vision-language attention, diffusion-based structural refinement, and attention evolution to localize open-vocabulary targets without task-specific fine-tuning.
                     </div>
                 </li>
             </ul>
